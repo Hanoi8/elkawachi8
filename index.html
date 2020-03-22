@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>KAWACHI</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">KAWACHI</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">KAWACHI</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">DJ,Salsa,Programming,Travel,Tea</h2>
+        <a href="https://www.youtube.com/channel/UCFuPhbGZoM4Rks5h5w1MYHQ?view_as=subscriber" 
+        class="btn btn-primary js-scroll-trigger">Go Youtube</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">About Me</h2>
+          <p class="text-white-50">こんにちは、河内です。２４歳様々な、チャレンジをしています。５０カ国世界を周り、世界共通のスキルを取得することに日々奮闘しています。
+                            習得中スキル*DJ*Salsa*Bachata*Youtube*SNS*プログラミング*英語*スペイン語*国際文化*日本文化*ビジネス*</p>
+        </div>
+      </div>
+      <img src="img/DLNZ7527.jpg" class="img-fluid" alt="">
+    </div>
+  </section>
+  <h1>なんのYouTubeを投稿した方がいいと思いますか？</h1>
+  <button class="select">ラテンカルチャー</button> 
+  <button class="select">プログラミング</button> 
+  <button class="select">旅行国際文化</button> 
+  <button onclick="writePen()">ポイントをあげる</button> 
+  <p id="info"></p>
+  <script>
+      class ColorPen{
+          constructor(color,length){
+              this.color=color;
+              this.length=length;
+          }
+          write(){
+              let msg='';
+             
+                  this.length+=1;
+                  msg=this.color+'の総合評価'+this.length;
+      
+              return msg;
+          }
+      }
+      const bts=document.querySelectorAll('.select');
+      let pens=[new ColorPen('ラテンカルチャー',0),new ColorPen('プログラミング',0),new ColorPen('旅行国際文化',0)];
+      let pen=null;
+      const info=document.getElementById('info');
+      for(let i=0;i<bts.length;i++){
+          bts[i].addEventListener('click',()=>{
+              pen=pens[i];
+              info.textContent=pen.color;
+               let ele=document.getElementById('.selsct');
+               ele.style.width='300px';
+               ele.style.height='200px';
+               ele.style.backgroundColor='blue';
+               ele.style.padding='10px';
+               ele.style.color='white';
+               ele.textContent='sample';
+          });
+      }
+      const writePen=()=>{
+          let msg='';
+          if(pen==null){
+              msg='選択してください!!!!';
+          }else{
+              msg=pen.write();
+          }
+          info.textContent=msg;
+      };
+      let div=document.getElementById('.img-fluid');
+      let h1=document.getElementById('h1');
+      div.addEventListener('mouseover',()=>{
+          div.style.transform='rotate(10000deg)';
+          div.style.transitionDuration='60s';
+      })
+      h1.addEventListener('mouseover',()=>{
+          h1.style.transitionDuration="15s";
+          h1.style.fontSize='50px';
+          h1.style.color='blue';
+      })
+      h1.addEventListener('mouseout',()=>{
+          h1.style.fontSize='16px';
+          h1.style.color='black';
+      })
+      </script>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <video muted src=”https://youtu.be/GtCZQAflMEU″ autoplay loop></video>
+          <iframe id=”Movie” name=”movie” title=”YouTube” src=”https://www.youtube.com/embed/GtCZQAflMEU=0&amp;rel=0&amp;modestbranding=1&mute=1&amp;wmode=transparent&（略）”></iframe>
+         <!-- <img class="img-fluid" src="img/MUUY9992 (3).jpg" alt="">
+         <iframe width="915" height="515" src="https://youtu.be/GtCZQAflMEU" frameborder="0" allowfullscreen></iframe>-->
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h2>世界共通スキルとは</h2>
+            <p class="text-black-50 mb-0">私の中での世界共通スキルとは、世界一周している中、共通してできたら、世界中の人と関われる物を指します</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/WYRD3515.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h2 class="text-white">Instagramにて</h2>
+                <p class="mb-0 text-white-50">世界一周中、大都市東京で繋がった友達や、取得スキルの現在状況を発信中!!!</p>
+                <a href="https://www.instagram.com/kawachi888/">@kawachi888</a>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/IMG_2739.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h2 class="text-white">El Kawachi Party</h2>
+                <p class="mb-0 text-white-50">日本の常識にとらわれない型破りなイベントに月1回挑戦しています!!!</p>
+                <a href="https://www.facebook.com/pg/elkawachi888/posts/">El Kawachi Party イベントページ</a>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Contact me!!!!!</h2>
+
+       <!--   <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+          </form>-->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">TOKYO/Japan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">elkawachi888@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Instagram</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">@kawachi888</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social d-flex justify-content-center">
+        <a href="https://www.instagram.com/kawachi888/" class="mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/pg/elkawachi888/posts/" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCFuPhbGZoM4Rks5h5w1MYHQ?view_as=subscriber" class="mx-2">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      KAWACHI
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
