@@ -311,3 +311,16 @@ footer {
   width:100% !important;
   height:100% !important;
 }*/
+.youtubeContainer{
+  position: relative;
+  width:80%;
+  padding-top:45%;
+  margin:2vh auto;
+}
+.youtubeContainer iframe{
+  position: absolute;
+  top:0;
+  right:0;
+  width:100% !important;
+  height:100% !important;
+}
