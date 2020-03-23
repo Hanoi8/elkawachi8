@@ -60,7 +60,7 @@
       </div>
     </div>
   </header>
-  
+
   <!-- About Section -->
   <section id="about" class="about-section text-center">
     <div class="container">
@@ -74,70 +74,6 @@
       <img src="img/DLNZ7527.jpg" class="img-fluid" alt="">
     </div>
   </section>
-  <h1>なんのYouTubeを投稿した方がいいと思いますか？</h1>
-  <button class="select">ラテンカルチャー</button> 
-  <button class="select">プログラミング</button> 
-  <button class="select">旅行国際文化</button> 
-  <button onclick="writePen()">ポイントをあげる</button> 
-  <p id="info"></p>
-  <script>
-      class ColorPen{
-          constructor(color,length){
-              this.color=color;
-              this.length=length;
-          }
-          write(){
-              let msg='';
-             
-                  this.length+=1;
-                  msg=this.color+'の総合評価'+this.length;
-      
-              return msg;
-          }
-      }
-      const bts=document.querySelectorAll('.select');
-      let pens=[new ColorPen('ラテンカルチャー',0),new ColorPen('プログラミング',0),new ColorPen('旅行国際文化',0)];
-      let pen=null;
-      const info=document.getElementById('info');
-      for(let i=0;i<bts.length;i++){
-          bts[i].addEventListener('click',()=>{
-              pen=pens[i];
-              info.textContent=pen.color;
-               let ele=document.getElementById('.selsct');
-               ele.style.width='300px';
-               ele.style.height='200px';
-               ele.style.backgroundColor='blue';
-               ele.style.padding='10px';
-               ele.style.color='white';
-               ele.textContent='sample';
-          });
-      }
-      const writePen=()=>{
-          let msg='';
-          if(pen==null){
-              msg='選択してください!!!!';
-          }else{
-              msg=pen.write();
-          }
-          info.textContent=msg;
-      };
-      let div=document.getElementById('.img-fluid');
-      let h1=document.getElementById('h1');
-      div.addEventListener('mouseover',()=>{
-          div.style.transform='rotate(10000deg)';
-          div.style.transitionDuration='60s';
-      })
-      h1.addEventListener('mouseover',()=>{
-          h1.style.transitionDuration="15s";
-          h1.style.fontSize='50px';
-          h1.style.color='blue';
-      })
-      h1.addEventListener('mouseout',()=>{
-          h1.style.fontSize='16px';
-          h1.style.color='black';
-      })
-      </script>
-
 
   <!-- Projects Section -->
   <section id="projects" class="projects-section bg-light">
@@ -146,10 +82,8 @@
       <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <video muted src=”https://youtu.be/GtCZQAflMEU″ autoplay loop></video>
-          <iframe id=”Movie” name=”movie” title=”YouTube” src=”https://www.youtube.com/embed/GtCZQAflMEU=0&amp;rel=0&amp;modestbranding=1&mute=1&amp;wmode=transparent&（略）”></iframe>
-         <!-- <img class="img-fluid" src="img/MUUY9992 (3).jpg" alt="">
-         <iframe width="915" height="515" src="https://youtu.be/GtCZQAflMEU" frameborder="0" allowfullscreen></iframe>-->
+          <img class="img-fluid" src="img/MUUY9992 (3).jpg" alt="">
+         <!-- <iframe width="915" height="515" src="https://youtu.be/GtCZQAflMEU?rel=0&controls=0" frameborder="0" allowfullscreen></iframe>-->
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
