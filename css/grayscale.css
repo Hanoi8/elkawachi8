@@ -313,8 +313,8 @@ footer {
 }*/
 .youtubeContainer{
   position: relative;
-  width:80%;
-  padding-top:45%;
+  width:100%;
+  padding-top:100%;
   margin:2vh auto;
 }
 .youtubeContainer iframe{
